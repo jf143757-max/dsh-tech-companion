@@ -1,3 +1,5 @@
 - insert:
     - id: tech-companion
       name: ../index.js
+    - id: tech-companion-ledger
+      name: ../harness/ledger.js

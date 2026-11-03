@@ -1,13 +1,19 @@
 {
   "name": "dsh-tech-companion",
-  "version": "0.1.0",
-  "description": "Gentle, contextual technical explanations for DeepSeek Harness conversations",
+  "version": "0.2.0",
+  "description": "Gentle, contextual technical explanations for DeepSeek Harness conversations, with opt-in knowledge-point cards, a daily digest and spaced review",
   "type": "module",
   "main": "index.js",
-  "files": ["index.js", "cordis.patch.yml", "skills/tech-companion/SKILL.md", "README.md", "LICENSE"],
-  "engines": { "dsh": ">=0.2.1-rc.3 <0.3.0" },
+  "exports": {
+    ".": "./index.js",
+    "./ledger": "./harness/ledger.js",
+    "./package.json": "./package.json"
+  },
+  "bin": { "tech-companion": "skills/tech-companion/scripts/companion.mjs" },
+  "files": ["index.js", "harness/", "cordis.patch.yml", "skills/tech-companion/", "README.md", "CHANGELOG.md", "LICENSE"],
+  "engines": { "dsh": ">=0.2.1-rc.3 <0.3.0", "node": ">=18" },
   "dsh": { "bundle": { "patch": "./cordis.patch.yml" } },
   "scripts": { "test": "node --test test/*.test.js" },
   "license": "MIT",
-  "keywords": ["deepseek-harness", "dsh-plugin", "learning", "technical-communication"]
+  "keywords": ["deepseek-harness", "dsh-plugin", "learning", "technical-communication", "spaced-repetition"]
 }

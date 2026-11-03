@@ -1,3 +1,5 @@
 - insert:
     - id: tech-companion
       name: dsh-tech-companion
+    - id: tech-companion-ledger
+      name: dsh-tech-companion/ledger
