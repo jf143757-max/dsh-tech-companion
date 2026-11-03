@@ -1,0 +1,13 @@
+{
+  "name": "dsh-tech-companion",
+  "version": "0.1.0",
+  "description": "Gentle, contextual technical explanations for DeepSeek Harness conversations",
+  "type": "module",
+  "main": "index.js",
+  "files": ["index.js", "cordis.patch.yml", "skills/tech-companion/SKILL.md", "README.md", "LICENSE"],
+  "engines": { "dsh": ">=0.2.1-rc.3 <0.3.0" },
+  "dsh": { "bundle": { "patch": "./cordis.patch.yml" } },
+  "scripts": { "test": "node --test test/*.test.js" },
+  "license": "MIT",
+  "keywords": ["deepseek-harness", "dsh-plugin", "learning", "technical-communication"]
+}
